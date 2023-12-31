@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Tide Table</title>
+</head>
+<body>
+<h2>Tide Table</h2>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Local Avg Sea Level</th>
+        <th>Max Scale Reference</th>
+        <th>Water Level</th>
+    </tr>
+    <tr th:each="tide : ${tides}">
+        <td th:text="${tide.id}"></td>
+        <td th:text="${tide.date}"></td>
+        <td th:text="${tide.time}"></td>
+        <td th:text="${tide.localAvgSeaLevel}"></td>
+        <td th:text="${tide.maxScaleReference}"></td>
+        <td th:text="${tide.waterLevel}"></td>
+    </tr>
+</table>
+</body>
+</html>
